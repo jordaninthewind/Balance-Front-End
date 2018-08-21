@@ -1,3 +1,4 @@
+const BASE_URL = 'https://balance-backend.herokuapp.com/'
 
 const initialState = {
 	users: [],
@@ -9,7 +10,7 @@ const setUsers = (users) => {
 }
 
 export const getAllUsers = () => dispatch => {
-	return fetch('http://localhost:3001/users.json', {mode: 'cors', creditials: 'include'})
+	return fetch(`${BASE_URL}/users.json`, {mode: 'cors', creditials: 'include'})
 		.then(res => {return res.json()})
 		.then(json => dispatch(setUsers(json)))
 }
@@ -19,7 +20,7 @@ export const setCurrentUser = (user) => {
 }
 
 export const createUser = (name, location) => dispatch => {
-	fetch("http://localhost:3001/users", {
+	fetch(`${BASE_URL}/users`, {
 	      headers: {
 	        'Accept': 'application/json',
 	        'Content-Type': 'application/json'
@@ -37,7 +38,7 @@ export const deleteCurrentUser = () => {
 }
 
 export const deleteUser = (user) => dispatch => {
-	fetch(`http://localhost:3001/users/${user.id}`, {
+	fetch(`${BASE_URL}/users/${user.id}`, {
 		headers: {'Content-Type': 'application/json'},
 		method: "DELETE"
 		})

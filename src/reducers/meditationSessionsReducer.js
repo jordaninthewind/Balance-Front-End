@@ -1,3 +1,5 @@
+const BASE_URL = 'https://balance-backend.herokuapp.com/'
+
 const initialState = {
 	meditationSessions: [],
 }
@@ -11,7 +13,7 @@ export const resetMeditationSessions = () => {
 }
 
 export const getUserMeditationSessions = (currentUser) => dispatch => {
-	fetch(`http://localhost:3001/users/${currentUser.id}/meditation_sessions.json`) // , {mode: 'cors', creditials: 'include' })
+	fetch(`${BASE_URL}/users/${currentUser.id}/meditation_sessions.json`) // , {mode: 'cors', creditials: 'include' })
 		.then(res => { return res.json() })
 		.then(json => { dispatch(setMeditationSessions(json))})
 }
@@ -21,7 +23,7 @@ const removeMeditationSession = (session) => {
 }
 
 export const deleteMeditationSession = (currentUser, session) => dispatch => {
-	fetch(`http://localhost:3001/users/${currentUser.id}/meditation_sessions/${session}`, {
+	fetch(`${BASE_URL}/users/${currentUser.id}/meditation_sessions/${session}`, {
 		method: "DELETE"
 		})
 		.then(() => { dispatch(removeMeditationSession(session))})
