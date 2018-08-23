@@ -44,7 +44,7 @@ class UserSelectContainer extends Component {
 
 	render() {
 		return (
-			<div className="App-welcome">
+			<div className="App-welcome App-component">
 				<h2>Find Balance!</h2>
 			  	<div>Balance is a simple app to track your daily meditation, find inspiration through quotes and resources, and track progress.</div>
 			  	{
