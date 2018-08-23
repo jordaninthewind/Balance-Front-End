@@ -19,7 +19,7 @@ class App extends Component {
             <div className="App-navbar">
               <Link to="/" >Home</Link>
               <span>  -  </span> 
-              <Link to="/meditation_sessions" >Meditation Sessions</Link>
+              <Link to="/meditation_sessions" >Sessions</Link>
               <span>  -  </span> 
               <Link to="/timer" >Timer</Link>
               <span> - </span>
@@ -38,7 +38,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.usersReducer.currentUser
+    currentUser: state.usersReducer.currentUser,
   }
 }
 
