@@ -43,9 +43,8 @@ class Clock extends Component {
 
   saveSession = (e) => {
     if (this.props.currentUser) {
-      fetch(`http://localhost:3001/users/${this.props.currentUser.id}/meditation_sessions`, {
+      fetch(`https://balance-backend.herokuapp.com/users/${this.props.currentUser.id}/meditation_sessions`, {
         headers: {
-          // 'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
         method: "POST",
