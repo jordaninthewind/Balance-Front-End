@@ -9,19 +9,19 @@ class QuoteContainer extends Component {
 		super(props);
 
 		this.state = {
-			currentQuoteIndex: 0,
+			currentQuoteIndex: 4,
 		}
-	}
-
-	selectQuote() {
-		const quoteIndex = Math.floor((Math.random() * (this.props.quotes.length - 1) + 0));
-		this.setState({currentQuoteIndex: quoteIndex});
 	}
 
 	componentDidMount() {
 		this.props.getAllQuotes();
     	setInterval(this.selectQuote.bind(this), 15000);
     }
+
+	selectQuote() {
+		const quoteIndex = Math.floor((Math.random() * (this.props.quotes.length - 1) + 0));
+		this.setState({currentQuoteIndex: quoteIndex});
+	}
 
 	render() {
 		return (
@@ -30,6 +30,7 @@ class QuoteContainer extends Component {
 		  		<Quote 
 		  		  quote={this.props.quotes[this.state.currentQuoteIndex]} 
 		  		/>}
+		  	<button onClick={this.selectQuote.bind(this)}>Change Quote</button>
 		  </div>
 		)
 	}
