@@ -42,7 +42,7 @@ class Clock extends Component {
   }
 
   saveSession = (e) => {
-    if (this.props.currentUser) {
+    if (this.props.currentUser && this.state.timeCount > 0) {
       fetch(`https://balance-backend.herokuapp.com/users/${this.props.currentUser.id}/meditation_sessions`, {
         headers: {
           'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ class Clock extends Component {
         clearInterval(this.intervalId)
 
     } else {
-      alert("You must be logged in to save a session!")
+        alert("You must be logged in to save a session and time must be greater than zero!")
     }
   }
 
@@ -83,7 +83,7 @@ class Clock extends Component {
     return(
       <div>
       	<h3>Time Since Start:</h3>
-      	<h1 style={{fontSize: '3em'}}>{timeSpentMeditating}</h1>
+      	<h1 style={{fontSize: '4em'}}>{timeSpentMeditating}</h1>
       		<button onClick={() => this.startClock()} >Start</button>
       		<button onClick={() => this.pauseClock()} >Pause</button>
       		<button onClick={() => this.resetClock()} >Reset</button>

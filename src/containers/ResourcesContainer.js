@@ -8,7 +8,7 @@ class ResourcesContainer extends React.Component {
 				<br /><br />
 				<div>Links:</div>
 				<br />
-				<a href="http://www.lionsroar.com" target="_blank">Lion's Roar</a>
+				<a href="http://www.lionsroar.com" target="_blank" rel="noopener noreferrer">Lion's Roar</a>
 			</div>)
 	}
 }

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import TitleBar from './components/TitleBar.js';
 import QuoteContainer from './containers/QuoteContainer';
-import UserContainer from './containers/UserContainer';
 import MeditationSessionsContainer from './containers/MeditationSessionsContainer'
 import TimerContainer from './containers/TimerContainer';
 import UserSelectContainer from './containers/UserSelectContainer';
