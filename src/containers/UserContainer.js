@@ -7,18 +7,16 @@ class UserContainer extends Component {
 	render() {
 		return (
 			<div className='App-component'>
-				<hr />
 				<h2>Logged In As:</h2>
 				{ this.props.currentUser && <UserInfo currentUserData={this.props.currentUser} /> }
 				{ !this.props.currentUser && <h3>Please select a current user.</h3> }
 				<br />
 				{
-				this.props.currentUser && <button onClick={() => { if (window.confirm("Click to confirm delete")) this.props.deleteUser(this.props.currentUser)}}>Delete User</button>
-				}
-				{
 				this.props.currentUser && <button onClick={() => this.props.logOut()}>Log Out</button>
 				}
-				<hr />
+				{
+				this.props.currentUser && <button onClick={() => { if (window.confirm("Click to confirm delete")) this.props.deleteUser(this.props.currentUser)}}>Delete User</button>
+				}
 			</div>
 		)
 	}
