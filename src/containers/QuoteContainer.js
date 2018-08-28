@@ -25,12 +25,11 @@ class QuoteContainer extends Component {
 
 	render() {
 		return (
-		  <div className="App-footer">
+		  <div className="App-footer" onClick={this.selectQuote.bind(this)} >
 		  	{ this.props.quotes.length && 
 		  		<Quote 
 		  		  quote={this.props.quotes[this.state.currentQuoteIndex]} 
 		  		/>}
-		  	<button onClick={this.selectQuote.bind(this)}>Change Quote</button>
 		  </div>
 		)
 	}
