@@ -38,6 +38,7 @@
 /* Handles landscape mode on most phones*/
 @media screen and (max-width: 800px) and (max-height: 500px) {
   .App-navbar {
+    max-height: 70px;
     font-size: 1em;
   }
 
@@ -53,6 +54,7 @@
 /*Smaller screen than vertical iPhone 8plus*/
 @media screen and (max-width: 700px) {
   .App-navbar {
+    max-height: 70px;
     font-size: 1em;
   }
 
