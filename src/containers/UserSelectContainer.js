@@ -45,7 +45,7 @@ class UserSelectContainer extends Component {
 	render() {
 		if (!this.props.currentUser) {
 		return (
-			<div className="App-welcome App-component">
+			<div className="App-component">
 				<h2>Find Balance!</h2>
 			  	<div>Balance is a simple app to track your daily meditation, find inspiration through quotes and resources, and track progress.</div>
 			  	<p>Select User to Track Progress</p>

@@ -48,20 +48,17 @@
   .App-footer {
     display: none;
   }
-
-  .App-welcome {
-    font-size: .8em;
-  }
 }
 
 /*Smaller screen than vertical iPhone 8plus*/
 @media screen and (max-width: 700px) {
   .App-navbar {
-    font-size: 1.1em;
+    font-size: .8em;
   }
 
   .App-component {
     top: 70px;
+    font-size: .8em;
   }
 
   .App-footer {

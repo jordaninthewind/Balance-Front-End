@@ -11,12 +11,8 @@ class UserContainer extends Component {
 				{ this.props.currentUser && <UserInfo currentUserData={this.props.currentUser} /> }
 				{ !this.props.currentUser && <h3>Please select a current user.</h3> }
 				<br />
-				{
-				this.props.currentUser && <button onClick={() => this.props.logOut()}>Log Out</button>
-				}
-				{
-				this.props.currentUser && <button onClick={() => { if (window.confirm("Click to confirm delete")) this.props.deleteUser(this.props.currentUser)}}>Delete User</button>
-				}
+				{ this.props.currentUser && <button onClick={() => this.props.logOut()}>Log Out</button> }
+				{ this.props.currentUser && <button onClick={() => { if (window.confirm("Click to confirm delete")) this.props.deleteUser(this.props.currentUser)}}>Delete User</button> }
 			</div>
 		)
 	}
