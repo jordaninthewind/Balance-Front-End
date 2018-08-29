@@ -37,12 +37,12 @@
 
 /* Handles landscape mode on most phones*/
 @media screen and (max-width: 800px) and (max-height: 500px) {
-  .App-component {
+  .App-navbar {
     font-size: 1em;
   }
 
-  .App-navbar {
-    font-size: 1em;
+  .App-component {
+    font-size: 1.1em;
   }
 
   .App-footer {
@@ -53,12 +53,12 @@
 /*Smaller screen than vertical iPhone 8plus*/
 @media screen and (max-width: 700px) {
   .App-navbar {
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .App-component {
     top: 70px;
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   .App-footer {
