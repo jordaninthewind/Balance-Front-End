@@ -26,14 +26,25 @@
 .App-navbar {
   position: relative;
   top: 70px;
-  color: rgba(100,20,255,.5);
-  
 }
+
+.App-component {
+  overflow: auto;
+  color: rgba(100,20,255,.5);
+} 
 
 .App-footer {
   background: linear-gradient(45deg, rgba(194,190,255,1) 0%, rgba(100,20,255,0.3) 25%, rgba(125,233,255,0.67) 80%);
+  background-color: white;
   cursor: default;
   padding: 20px;
+}
+
+.tile {
+  border: 10px solid rgba(100,20,255,.1);
+  padding-top: 1%;
+  margin: 2%;
+  border-radius: 500px; 
 }
 
 /* Handles landscape mode on most phones*/
@@ -44,7 +55,7 @@
   }
 
   .App-component {
-    font-size: 1.1em;
+    font-size: 15px;
   }
 
   .App-footer {
@@ -61,7 +72,7 @@
 
   .App-component {
     top: 70px;
-    font-size: 1.1em;
+    font-size: 15px;
   }
 
   .App-footer {

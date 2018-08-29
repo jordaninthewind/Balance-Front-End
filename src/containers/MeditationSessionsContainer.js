@@ -23,7 +23,6 @@ class MeditationSessionsContainer extends Component {
 			 						currentUser={this.props.currentUser}
 			 						deleteSession={this.props.deleteMeditationSession} 
 			 					/>
-			 					<hr style={{width: '40%'}}/>
 	 						</div>)
 	 			})
 	 		} else {
@@ -40,7 +39,7 @@ class MeditationSessionsContainer extends Component {
 		  		this.props.currentUser && <div>{this.props.currentUser.name}'s Sessions</div> 
 		  	}
 			{ 
-		  		(this.props.meditationSessions > 0) && <div>Total Count: {this.props.meditationSessions}</div>
+		  		(this.props.meditationSessions > 0) && <div>Total Count: {this.props.meditationSessions.count}</div>
 		  	}
 		  		
 		    <br />
