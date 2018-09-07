@@ -34,14 +34,9 @@ class MeditationSessionsContainer extends Component {
 
 		return (
 		  <div className='App-component'>
-		  	<br /><br />
-		  	{ 
-		  		this.props.currentUser && <div>{this.props.currentUser.name}'s Sessions</div> 
-		  	}
-			{ 
-		  		(this.props.meditationSessions > 0) && <div>Total Count: {this.props.meditationSessions.count}</div>
-		  	}
-		  		
+		  	<br />
+		  	{ this.props.currentUser && <div>{this.props.currentUser.name}'s Sessions</div> }
+			{ (this.props.meditationSessions > 0) && <div>Total Count: {this.props.meditationSessions.count}</div> }
 		    <br />
 		  	{ sessions }
 		  </div>
