@@ -25,12 +25,14 @@
 
 .App-navbar {
   position: relative;
+  font-size: 18px;
   top: 70px;
 }
 
 .App-component {
   overflow: auto;
   color: rgba(100,20,255,.5);
+  font-size: 1.5em;
 } 
 
 .App-footer {
