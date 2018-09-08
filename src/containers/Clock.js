@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+
 class Clock extends Component {
   constructor(props){
     super(props);
@@ -49,7 +50,7 @@ class Clock extends Component {
         },
         method: "POST",
         body: JSON.stringify({meditation_session: {time: this.state.timeCount}})
-        })
+          })
         .then(function(res){ alert("Saved session!") })
         .catch(function(res){ console.log(res) })
 
@@ -60,12 +61,13 @@ class Clock extends Component {
         clearInterval(this.intervalId)
 
     } else {
-        alert("You must be logged in to save a session and time must be greater than zero!")
+        alert("You must be logged in to save a session and timer must be at a value greater than zero!")
     }
   }
 
 
   render() {
+
   	const minutes = Math.floor(this.state.timeCount / 60);
   	const seconds = () => {
     		if (this.state.timeCount % 60 < 10) {

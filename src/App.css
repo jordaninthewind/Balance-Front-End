@@ -23,6 +23,11 @@
   height: 70px;
 }
 
+.App-body {
+  top: 70px;
+  position: relative;
+}
+
 .App-navbar {
   position: relative;
   font-size: 18px;
@@ -47,6 +52,11 @@
   padding-top: 1%;
   margin: 2%;
   border-radius: 500px; 
+}
+
+.responsiveImage {
+  width: 50%;
+  height: 50%;
 }
 
 /* Handles landscape mode on most phones*/
@@ -106,5 +116,10 @@
 
   .App-navbar {
     font-size: 1.5em;
+  }
+
+  .responsiveImage {
+    width: 20%;
+    height: 20%;
   }
 }

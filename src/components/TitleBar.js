@@ -1,5 +1,5 @@
 import React from 'react';
-// Can I update the expression of this relative to viewscreen size?
+
 const TitleBar = () => {
   return (
 	  <div className="App-header">

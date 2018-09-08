@@ -16,18 +16,22 @@ class App extends Component {
         <div className="App">
           <TitleBar />
           <BrowserRouter>
-            <div className="App-navbar">
-              <Link to="/" >Home</Link>
-              <span>  -  </span> 
-              <Link to="/meditation_sessions" >Sessions</Link>
-              <span>  -  </span> 
-              <Link to="/timer" >Timer</Link>
-              <span> - </span>
-              <Link to="/resources" >Resources</Link>
-              <Route exact path="/" component={UserSelectContainer} />
-              <Route exact path="/meditation_sessions" component={MeditationSessionsContainer} />
-              <Route path="/timer" component={TimerContainer} />
-              <Route path="/resources" component={ResourcesContainer} />
+            <div>
+              <nav className="App-navbar">
+                <Link to="/" >Home</Link>
+                <span>  -  </span> 
+                <Link to="/meditation_sessions" >Sessions</Link>
+                <span>  -  </span> 
+                <Link to="/timer" >Timer</Link>
+                <span> - </span>
+                <Link to="/resources" >Resources</Link>
+              </nav>
+              <div className="App-body">
+                <Route exact path="/" component={UserSelectContainer} />
+                <Route exact path="/meditation_sessions" component={MeditationSessionsContainer} />
+                <Route path="/timer" component={TimerContainer} />
+                <Route path="/resources" component={ResourcesContainer} />
+              </div>
             </div>
           </BrowserRouter>
         <QuoteContainer />
