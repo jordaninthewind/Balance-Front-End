@@ -67,20 +67,19 @@ class Clock extends Component {
 
 
   render() {
-
   	const minutes = Math.floor(this.state.timeCount / 60);
   	const seconds = () => {
-    		if (this.state.timeCount % 60 < 10) {
-    			return "0" + this.state.timeCount % 60;
-    		} else {
-    			return this.state.timeCount % 60;
-    		}
+  		if (this.state.timeCount % 60 < 10) {
+  			return "0" + this.state.timeCount % 60;
+  		} else {
+  			return this.state.timeCount % 60;
+  		}
   	}
 
   	const timeSpentMeditating = 
-    		this.state.timeCount < 60 ? 
-    		this.state.timeCount : 
-    		minutes + ":" + seconds();
+  		this.state.timeCount < 60 ? 
+  		this.state.timeCount : 
+  		minutes + ":" + seconds();
 
     return(
       <div>

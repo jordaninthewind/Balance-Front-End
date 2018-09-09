@@ -54,6 +54,11 @@
   border-radius: 500px; 
 }
 
+.menuTile {
+  color: rgba(100,20,255,.3);
+  padding: 10px;
+}
+
 .responsiveImage {
   width: 50%;
   height: 50%;

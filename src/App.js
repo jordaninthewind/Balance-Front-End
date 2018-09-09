@@ -18,13 +18,10 @@ class App extends Component {
           <BrowserRouter>
             <div>
               <nav className="App-navbar">
-                <Link to="/" >Home</Link>
-                <span>  -  </span> 
-                <Link to="/meditation_sessions" >Sessions</Link>
-                <span>  -  </span> 
-                <Link to="/timer" >Timer</Link>
-                <span> - </span>
-                <Link to="/resources" >Resources</Link>
+                <Link to="/" className="menuTile">Home</Link>
+                <Link to="/meditation_sessions" className="menuTile">Sessions</Link>
+                <Link to="/timer" className="menuTile">Timer</Link>
+                <Link to="/resources" className="menuTile">Resources</Link>
               </nav>
               <div className="App-body">
                 <Route exact path="/" component={UserSelectContainer} />
