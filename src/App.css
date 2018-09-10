@@ -53,15 +53,24 @@
   margin: 2%;
   border-radius: 500px; 
 }
-
+/*menu tiles are as yet unused*/
 .menuTile {
   color: rgba(100,20,255,.3);
   padding: 10px;
 }
 
+.title {
+  text-shadow: 1px 1px rgba(100,20,255,.2);
+}
+
 .responsiveImage {
-  width: 50%;
-  height: 50%;
+  display: inline-block;
+  position: fixed;
+  left: -20px;
+  top: -30px;
+  height: 150px;
+  width: 150px;
+  z-index: -1;
 }
 
 /* Handles landscape mode on most phones*/
@@ -101,6 +110,14 @@
     font-size: 1em;
     color: white;
   }
+
+  .responsiveImage {
+    top: -30px;
+    left: -20px;
+    height: 150px;
+    width: 150px;
+    z-index: -1;
+  }
 }
 
 /*Larger Screen than vertical iPhone*/
@@ -123,8 +140,8 @@
     font-size: 1.5em;
   }
 
-  .responsiveImage {
+  /*.responsiveImage {
     width: 20%;
     height: 20%;
-  }
+  }*/
 }
