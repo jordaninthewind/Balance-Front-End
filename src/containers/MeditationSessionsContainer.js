@@ -14,7 +14,7 @@ class MeditationSessionsContainer extends Component {
 	render() {
 		let sessions;
  	
-	 	if (this.props.meditationSessions) {
+	 	if (this.props.currentUser) {
 	 		if (this.props.meditationSessions.length > 0) {
 	 			sessions = this.props.meditationSessions.reverse().map(session => {
 	 				return (<div key={session.id}>
