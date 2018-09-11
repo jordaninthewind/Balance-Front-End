@@ -16,19 +16,15 @@ class App extends Component {
         <div className="App">
           <TitleBar />
           <BrowserRouter>
-            <div>
-              <nav className="App-navbar">
-                <Link to="/" className="menuTile">Home</Link>
-                <Link to="/meditation_sessions" className="menuTile">Sessions</Link>
-                <Link to="/timer" className="menuTile">Timer</Link>
-                <Link to="/resources" className="menuTile">Resources</Link>
-              </nav>
-              <div className="App-body">
-                <Route exact path="/" component={UserSelectContainer} />
-                <Route exact path="/meditation_sessions" component={MeditationSessionsContainer} />
-                <Route path="/timer" component={TimerContainer} />
-                <Route path="/resources" component={ResourcesContainer} />
-              </div>
+            <div className="App-navbar">
+              <Link to="/" className="menuTile">Home</Link>
+              <Link to="/meditation_sessions" className="menuTile">Sessions</Link>
+              <Link to="/timer" className="menuTile">Timer</Link>
+              <Link to="/resources" className="menuTile">Resources</Link>
+              <Route exact path="/" component={UserSelectContainer} />
+              <Route exact path="/meditation_sessions" component={MeditationSessionsContainer} />
+              <Route path="/timer" component={TimerContainer} />
+              <Route path="/resources" component={ResourcesContainer} />
             </div>
           </BrowserRouter>
         <QuoteContainer />
