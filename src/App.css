@@ -57,7 +57,7 @@
 /*menu tiles are as yet unused*/
 .menuTile {
   color: rgba(100,20,255,.3);
-  padding: 10px;
+  padding: 5px;  
 }
 
 .title {
@@ -134,15 +134,10 @@
   }
 
   .App-component {
-    padding: 25px;
+    /*padding: 25px;*/
   }
 
   .App-navbar {
     font-size: 1.5em;
   }
-
-  /*.responsiveImage {
-    width: 20%;
-    height: 20%;
-  }*/
 }
